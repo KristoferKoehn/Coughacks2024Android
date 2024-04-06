@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dstn00v3fwe56"]
+
+[ext_resource type="PackedScene" uid="uid://c58ttnv7wio58" path="res://Managers/ConnectionManager.tscn" id="1_2u1ib"]
+[ext_resource type="Texture2D" uid="uid://dg0a23e7pmknj" path="res://assets/minimap.png" id="2_5gn3d"]
+
+[node name="GameLoop" type="Node"]
+
+[node name="ConnectionManager" parent="." instance=ExtResource("1_2u1ib")]
+
+[node name="SendDataButton" type="Button" parent="."]
+visible = false
+offset_left = 286.0
+offset_top = 163.0
+offset_right = 373.0
+offset_bottom = 194.0
+text = "Send Data"
+
+[node name="Minimap" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(830, 314)
+texture = ExtResource("2_5gn3d")
+
+[connection signal="pressed" from="SendDataButton" to="ConnectionManager" method="_on_send_data_button_pressed"]

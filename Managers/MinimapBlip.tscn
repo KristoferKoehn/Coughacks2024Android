@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce13jdlojjp2j"]
+
+[ext_resource type="Texture2D" uid="uid://7anwme1sfgav" path="res://assets/blip.png" id="1_8wyo7"]
+[ext_resource type="Script" path="res://Managers/minimap_blip.gd" id="1_u2hfq"]
+
+[node name="MinimapBlip" type="Sprite2D"]
+modulate = Color(0, 1.081, 0, 1)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("1_8wyo7")
+script = ExtResource("1_u2hfq")
